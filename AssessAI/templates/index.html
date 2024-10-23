@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSESS AI</title>
+    <style>
+        /* Basic styling for splash screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: rgb(20, 15, 15);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .splash-container {
+            text-align: center;
+        }
+
+        .splash-container h1 {
+            font-size: 3em;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="splash-container">
+        <h1>ASSESS AI</h1>
+    </div>
+
+    <script>
+        // Wait for 3 seconds and then redirect to the main website page
+        setTimeout(function() {
+            window.location.href = "{% url 'project' %}"; // Change this to the actual path of your main page
+        }, 4000);
+    </script>
+</body>
+</html>
